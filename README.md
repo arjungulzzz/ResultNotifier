@@ -3,7 +3,7 @@ This Python Script is Intended to Notify the User about the Exam Results declare
 
 
 # resultsnotifier.py
-The Code Grabs the HTML content of the Target Page and then Searches for the Keywords 
+The Code checks the internet connection, if its up : grabs the HTML content of the Target Page and then Searches for the Keywords 
 If Keyword is found, another file resultsconfirm.py is called
 
 # resultsconfirm.py

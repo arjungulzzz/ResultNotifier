@@ -24,7 +24,7 @@ while 1:
         while 1:
             with urllib.request.urlopen('http://duexam.du.ac.in/RSLT_MJ2016/Students/List_Of_Declared_Results.aspx') as response:
                 html=response.read()
-                matches = html.find(b'39')
+                matches = html.find(b'39') 
                 if matches != -1:
                     MessageBox(None, 'RESULT NOT OUT YET', 'YEAH!!', 0)
                     time.sleep(600)

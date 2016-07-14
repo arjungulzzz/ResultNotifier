@@ -2,7 +2,7 @@
 This Python Script is Intended to Notify the User about the Exam Results declared on the College/University Website and was Specifically scripted for my Results. 
 
 
-# results.py
+# resultsnotifier.py
 The Code Grabs the HTML content of the Target Page and then Searches for the Keywords 
 If Keyword is found, another file resultsconfirm.py is called
 

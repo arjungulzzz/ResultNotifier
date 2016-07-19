@@ -9,6 +9,7 @@ import os
 import time
 MessageBox=ctypes.windll.user32.MessageBoxW
 req = Request("http://duexam.du.ac.in/RSLT_MJ2016/Students/List_Of_Declared_Results.aspx")
+localtime=time.asctime(time.localtime(time.time()))
 while 1:
     try:
         response = urlopen(req)
@@ -19,6 +20,7 @@ while 1:
     except URLError as e:
                 print('We failed to reach a server.')
                 print('Reason: ', e.reason)
+                print('at time --> ',localtime)
                 time.sleep(100)
     else:
         while 1:

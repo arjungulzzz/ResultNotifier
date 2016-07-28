@@ -16,6 +16,8 @@ while 1:
     except HTTPError as e:
             print('The server couldn\'t fulfill the request.')
             print('Error code: ', e.code)
+            localtime=time.asctime(time.localtime(time.time()))
+            print('at time --> ',localtime)
             time.sleep(100)
     except URLError as e:
                 print('We failed to reach a server.')

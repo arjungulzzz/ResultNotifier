@@ -10,5 +10,25 @@ d=OrderedDict.fromkeys(['AANCHAL BANSAL','ABHINAV KUMAR','ADITYA KUMAR','AJAY KU
 print(d)
 
 count=0
-soup=BeautifulSoup(open(StudentNames[count]+'txt'),'html5lib')
-soup.find_all('td')[21]
+StudentMarks=[]
+while(count<49):
+    soup=BeautifulSoup(open(StudentNames[count]+'.txt'),'html5lib')
+    mark=soup.find_all('td')[21]
+    marks=mark.get_text()
+    percentage=int(marks)*0.1818181818181818
+    
+    StudentMarks.insert(count,round(percentage,2))
+    
+    
+    #print(StudentNames[count]+'= '+str(percentage))
+    count=count+1
+#print(StudentMarks)
+info=dict(zip(StudentNames,StudentMarks))
+perc=sorted(info.values())
+name=sorted(info,key=info.get)
+newcount=0
+namecount=48
+while(newcount<50 and namecount>0):
+    print(str(newcount+1)+') '+name[namecount]+': '+str(perc[namecount]))
+    newcount=newcount+1
+    namecount=namecount-1
